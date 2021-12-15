@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# blog
+
+## Next+Typescript + GraphCMS (headless cms w/ GraphQL)
