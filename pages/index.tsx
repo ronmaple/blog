@@ -5,8 +5,7 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Date from '../components/date'
 import {GetStaticProps} from 'next'
-
-import { getPosts } from './getPosts'
+import {getPosts} from '../lib/getPosts'
 
 type PostData = {
   // date: string
@@ -22,9 +21,7 @@ export default function Home({posts}: {posts: PostData[]}) {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Software Engineer</p>
-        <p>
-          Code, food, food for thought
-        </p>
+        <p>Code, food, food for thought</p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -37,7 +34,7 @@ export default function Home({posts}: {posts: PostData[]}) {
               </Link>
               <br />
               <small className={utilStyles.lightText}>
-                 no actual data. don't even think about clicking this
+                no actual data. don't even think about clicking this
               </small>
             </li>
           ))}
@@ -49,6 +46,5 @@ export default function Home({posts}: {posts: PostData[]}) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const graphqlData = await getPosts()
-  console.log({ graphqlData })
   return graphqlData
 }

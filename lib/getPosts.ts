@@ -1,5 +1,5 @@
 import {gql} from 'graphql-request'
-import {client} from './api/client'
+import {client} from '../pages/api/client'
 
 const QUERY = gql`
   {
