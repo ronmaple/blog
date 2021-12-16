@@ -4,23 +4,22 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
-export const siteTitle = 'Next.js Sample Website'
+const name = 'Ron Mapue'
+export const siteTitle = 'ronmapue.com'
 
-export default function Layout({
-  children,
-  home,
-}: {
+type LayoutInput = {
   children: React.ReactNode
   home?: boolean
-}) {
+}
+
+export default function Layout({children, home}: LayoutInput) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Coding progress, food, and more"
         />
         <meta
           property="og:image"
